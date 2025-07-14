@@ -116,25 +116,20 @@ nav {
 }
 
 
-/* Target the entire scrollbar */
 ::-webkit-scrollbar {
     width: 15px;
-    /* horizontal: height instead */
 }
 
-/* Track (background of the scrollbar) */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 0px;
 }
 
-/* Handle (the actual scroll thing that moves) */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #00c9ff, #92fec3);
     border-radius: 5px;
 }
 
-/* On hover */
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #fddb92, #fd9292);
 }
@@ -142,7 +137,6 @@ nav {
 .hover-dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
-    /* prevents jump */
     animation: fadeDown 0.3s ease-in-out;
 }
 
