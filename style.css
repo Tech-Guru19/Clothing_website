@@ -5,6 +5,22 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
+nav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    background: #fff !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-brand {
+    font-size: 22px !important;
+    color: #012f05;
+    font-weight: 600;
+    /* justify-items: center; */
+    margin-left: 500px;
+}
+
 .Hero-section {
     background-color: #effbf7;
     height: 550px;
@@ -20,14 +36,14 @@
     font-weight: 600;
     line-height: 50px;
     width: 450px;
-    color:  #012f05;
+    color: #012f05;
 }
 
 .text p {
     font-size: 18px;
     font-weight: 300;
     width: 550px;
-    color:  #012f05;
+    color: #012f05;
 }
 
 .btn1 {
@@ -52,31 +68,122 @@
     background-color: #effbf7;
 }
 
-.img{
+.img {
     margin-left: 18%;
     margin-top: 3%;
 }
 
-.img img{
+.img img {
     width: 105%;
 }
 
-.card-section{
+.General-design {
     background-color: #f6f9ee;
-    height: 500px;
+    height: 1500px;
+    padding-top: 30px;
+    /* display: wrap; */
 }
 
-.card-text{
-    text-align: center;
+.card-section {
+    justify-items: center;
 }
 
-.card-text h1{
+.card-text {
+    color: black;
+}
+
+
+.card-text h1 {
     font-size: 40px;
     font-weight: 500;
     line-height: 50px;
+    text-align: center;
+
 }
 
-.card-text p{
+.card-text p {
     font-size: 16px;
+    text-align: center;
     font-weight: 300;
+}
+
+.card-img {
+    width: 260px !important;
+}
+
+.secondCardsection {
+    justify-items: center;
+}
+
+
+/* Target the entire scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+    /* horizontal: height instead */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0px;
+}
+
+/* Handle (the actual scroll thing that moves) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00c9ff, #92fec3);
+    border-radius: 5px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #fddb92, #fd9292);
+}
+
+.hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* prevents jump */
+    animation: fadeDown 0.3s ease-in-out;
+}
+
+/* Optional: fade/slide animation */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card {
+    margin-top: 40px;
+    animation: show;
+    /* border: 20px solid blue; */
+    animation-timeline: view();
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.card:hover{
+    scale: 1.05;
+    transition: transform 1s;
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    20%{
+        transform: translateY(0px) ;
+        opacity: .8;
+    }
 }
